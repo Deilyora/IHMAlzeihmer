@@ -11,6 +11,7 @@ public class MainPanel extends JPanel{
    private JPanel bottom;
    private JPanel top;
    private JPanel param;
+   private JPanel tit;
 
    public MainPanel(){
       title=new JLabel("PILLS FINDER");
@@ -24,12 +25,16 @@ public class MainPanel extends JPanel{
       bottom.add(sort);
 
       param=new JPanel();
-      param.setLayout(new FlowLayout());
-      param.add(parameters);
+      param.setLayout(new BorderLayout());
+      param.add(parameters,BorderLayout.EAST);
+
+      tit=new JPanel();
+      tit.setLayout(new FlowLayout());
+      tit.add(title);
 
       top=new JPanel();
       top.setLayout(new BorderLayout());
-      top.add(title,BorderLayout.CENTER);
+      top.add(tit,BorderLayout.CENTER);
       top.add(param,BorderLayout.NORTH);
 
       setLayout(new GridLayout(2,1));

@@ -4,7 +4,7 @@ import java.awt.*;
 import java.io.*;
 import javax.swing.*;
 
-public class ConnectionPanel extends Jpanel {
+public class ConnectionPanel extends JPanel {
 	private JLabel title;
 	private JTextField text;
 	private JButton connect;
@@ -20,3 +20,4 @@ public class ConnectionPanel extends Jpanel {
 		connect = new JButton("Se connecter");
 		back = new JButton("Retour au menu");
 	}
+}

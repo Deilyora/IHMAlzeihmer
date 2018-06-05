@@ -42,4 +42,9 @@ public class MainPanel extends JPanel{
       add(bottom);
 
    }
+
+   public JButton getParameters(){
+      return this.parameters; 
+   }
+
 }

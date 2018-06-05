@@ -13,19 +13,16 @@ public class MainFrame extends JFrame {
 	public void initComponents() {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setTitle("PILLS FINDER");
-		//MainPanel mp = new MainPanel();
-		/*
-		LocationPanel lp = new LocationPanel();
-		FindingPillsPanel fpp = new FindingPillsPanel();
-		PillBoxPanel pbp = new PillBoxPanel();
-
-		StoringPillsPanel spp = new StoringPillsPanels();
-		JobDonePanel jdp = new JobDonePanel();
-		*/ConnectionPanel cp = new ConnectionPanel();
-		//AddPillsPanel app = new AddPillsPanel();
-		add(cp);
-		//setLayout(new BorderLayout());
-		//add(mp,BorderLayout.CENTER);
+		MainPanel mp = new MainPanel();
+		ConnectionPanel cp = new ConnectionPanel();
+		AddPillsPanel app = new AddPillsPanel();
+		ButtonListener b= new ButtonListener(this,mp,cp,app);
+		mp.getParameters().addActionListener(b);
+		cp.getBackButton().addActionListener(b);
+		cp.getConnectButton().addActionListener(b);
+		app.getEnd().addActionListener(b);
+		setLayout(new BorderLayout());
+		add(mp,BorderLayout.CENTER);
 		pack();
 	}
 
@@ -36,6 +33,13 @@ public class MainFrame extends JFrame {
 				new MainFrame().setVisible(true);
 			}
 		});
+	}
+
+	public void setFrame(JPanel oldPanel,JPanel newPanel){
+		remove(oldPanel);
+		add(newPanel,BorderLayout.CENTER);
+		revalidate();
+		pack();
 	}
 
 }

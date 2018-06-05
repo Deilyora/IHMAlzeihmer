@@ -77,4 +77,7 @@ public class AddPillsPanel extends JPanel {
 
 
 	}
+	public JButton getEnd(){
+		return this.end;
+	}
 }

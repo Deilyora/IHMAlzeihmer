@@ -23,10 +23,5 @@ public class AddPillsPanel extends JPanel {
 
 
 	public AddPills() {
-		initComponents();
-	}
-
-	public void initComponents() {
-
 
 	}

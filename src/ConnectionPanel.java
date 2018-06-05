@@ -19,3 +19,4 @@ public class ConnectionPanel extends Jpanel {
 		text = new JTextField("Mot de passe");
 		connect = new JButton("Se connecter");
 		back = new JButton("Retour au menu");
+	}

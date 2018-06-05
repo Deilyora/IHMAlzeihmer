@@ -19,6 +19,7 @@ public class ConnectionPanel extends JPanel {
 		text = new JPasswordField("xxxxxx");
 		connect = new JButton("Se connecter");
 		back = new JButton("Retour au menu");
+
 		setLayout(new GridLayout(4,1));
 		add(title);
 		add(text);
@@ -36,3 +37,6 @@ public class ConnectionPanel extends JPanel {
 		return this.back;
 	}
 }
+
+
+

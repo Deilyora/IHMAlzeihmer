@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class ConnectionPanel extends JPanel {
 	private JLabel title;
-	private JTextField text;
+	private JPasswordField text;
 	private JButton connect;
 	private JButton back;
 
@@ -16,8 +16,27 @@ public class ConnectionPanel extends JPanel {
 
 	public void initComponents() {
 		title = new JLabel("Paramètres");
-		text = new JTextField("Mot de passe");
+		text = new JPasswordField("xxxxxx");
 		connect = new JButton("Se connecter");
 		back = new JButton("Retour au menu");
+
+		setLayout(new GridLayout(4,1));
+		add(title);
+		add(text);
+		add(connect);
+		add(back);
+		
+		
+	}
+	
+	public JButton getConnectButton() {
+		return this.connect;
+	}
+	
+	public JButton getBackButton() {
+		return this.back;
 	}
 }
+
+
+

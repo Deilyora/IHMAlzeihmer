@@ -21,10 +21,11 @@ public class MainFrame extends JFrame {
 		StoringPillsPanel = new StoringPillsPanels();
 		JobDonePanel = new JobDonePanel();
 		ConnectionPanel = new ConnectionPanel();
-		AddPillsPanel = new AddPillsPanel();
 		*/
+		AddPillsPanel app= new AddPillsPanel();
+
 		setLayout(new BorderLayout());
-		add(mp,BorderLayout.CENTER);
+		add(app,BorderLayout.CENTER);
 		pack();
 	}
 

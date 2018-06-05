@@ -20,7 +20,7 @@ public class AddPillsPanel extends JPanel {
 	private JCheckBox coucher;
 	private JButton add;
 	private JButton end;
-	private final String[] LISTE_MED={"Xanax","Doliprane"}
+	private final String[] LISTE_MED={"Xanax","Doliprane"};
 	private JPanel buttons;
 	private JPanel comboBox;
 	private JPanel days;
@@ -62,8 +62,18 @@ public class AddPillsPanel extends JPanel {
 		this.days.add(this.samedi);
 		this.days.add(this.dimanche);
 
-		setLayout(new GridLayout(4,1))
+		this.time=new JPanel();
+		this.time.setLayout(new FlowLayout());
+		this.time.add(matin);
+		this.time.add(midi);
+		this.time.add(soir);
+		this.time.add(coucher);
 
+		setLayout(new GridLayout(4,1));
+		add(this.comboBox);
+		add(this.days);
+		add(this.time);
+		add(this.buttons);
 
 
 	}
